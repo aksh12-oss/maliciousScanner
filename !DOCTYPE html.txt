@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malicious Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Malicious Scanner</h1>
+
+        <h2>Scan URL</h2>
+        <form id="url-form">
+            <input type="text" id="url-input" placeholder="Enter URL" required>
+            <button type="submit">Scan URL</button>
+        </form>
+        <div id="url-result"></div>
+
+        <h2>Scan IP Address</h2>
+        <form id="ip-form">
+            <input type="text" id="ip-input" placeholder="Enter IP Address" required>
+            <button type="submit">Scan IP</button>
+        </form>
+        <div id="ip-result"></div>
+
+        <h2>Scan File</h2>
+        <form id="file-form" enctype="multipart/form-data">
+            <input type="file" id="file-input" required>
+            <button type="submit">Scan File</button>
+        </form>
+        <div id="file-result"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>  <!-- Local JS if you use it -->
+
+</body>
+</html>
